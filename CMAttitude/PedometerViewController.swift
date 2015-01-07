@@ -14,11 +14,16 @@ class PedometerViewController: UIViewController {
     @IBOutlet weak var stepsTodayLabel: UILabel!
     @IBOutlet weak var goalLabel: UILabel!
     @IBOutlet weak var radialView: MDRadialProgressView!
+    @IBOutlet weak var distanceLabel: UILabel!
+    @IBOutlet weak var rateLabel: UILabel!
     
     let dailyGoal = 5000
     let pedometer = CMPedometer()
+    let dateFormatter = NSDateFormatter()
     
     var stepsToday = 0
+    var lastUpdated = NSDate()
+    var lastDistance = 0.0
     
     var midnight: NSDate {
         let cal = NSCalendar.autoupdatingCurrentCalendar()
@@ -49,6 +54,32 @@ class PedometerViewController: UIViewController {
         super.viewWillDisappear(animated)
     }
     
+    func handlePedometer() {
+        if CMPedometer.isStepCountingAvailable() {
+            pedometer.startPedometerUpdatesFromDate(midnight) { [weak self] data, error in
+            
+                let meters = data.distance.doubleValue
+                let distanceFormatter = NSLengthFormatter()
+                
+                let timeDelta = data.endDate.timeIntervalSinceDate(self?.lastUpdated ?? NSDate())
+                let distanceDelta = meters - (self?.lastDistance ?? 0.0)
+                let rate = distanceDelta / timeDelta
+                
+                self?.lastUpdated = NSDate()
+                self?.lastDistance = meters
+                
+                dispatch_async(dispatch_get_main_queue()) {
+                    self?.stepsToday = data.numberOfSteps.integerValue
+                    self?.stepsTodayLabel.text = "\(self?.stepsToday ?? 0) steps taken today"
+                    self?.distanceLabel.text = "\(distanceFormatter.stringFromMeters(meters))"
+                    self?.rateLabel.text = "\(distanceFormatter.stringFromMeters(rate)) / s"
+                    self?.drawCircle(self?.progress ?? 0)
+                }
+            }
+        }
+    }
+    
+    // Radial progress view
     func setupRadialProgressView() {
         self.radialView.progressTotal = 100
         self.radialView.progressCounter = 0
@@ -58,20 +89,7 @@ class PedometerViewController: UIViewController {
         self.radialView.theme.sliceDividerHidden = true
         self.radialView.theme.centerColor = self.radialView.theme.incompletedColor
     }
-
-    func handlePedometer() {
-        if CMPedometer.isStepCountingAvailable() {
-            pedometer.startPedometerUpdatesFromDate(midnight) { [weak self] data, error in
-            
-                dispatch_async(dispatch_get_main_queue()) {
-                    self?.stepsToday = data.numberOfSteps.integerValue
-                    self?.stepsTodayLabel.text = "\(self?.stepsToday ?? 0) steps taken today"
-                    self?.drawCircle(self?.progress ?? 0)
-                }
-            }
-        }
-    }
-    
+ 
     func drawCircle(progress: Int) {
         if progress >= 100 {
             radialView.theme.completedColor = UIColor.greenColor()

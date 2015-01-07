@@ -126,35 +126,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-Pa-V7I" customClass="MDRadialProgressView">
+                                <rect key="frame" x="180" y="295" width="240" height="240"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="Ip4-Oh-9r3"/>
+                                    <constraint firstAttribute="width" constant="240" id="nkz-ZU-IIW"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAR-JS-AXs">
+                                <rect key="frame" x="279" y="201" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tnH-01-eNi">
+                                <rect key="frame" x="279" y="229" width="42" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAN-tz-0fg">
-                                <rect key="frame" x="276" y="150.5" width="48.5" height="24"/>
+                                <rect key="frame" x="276" y="129" width="48.5" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYB-c2-3ZW">
-                                <rect key="frame" x="279" y="194.5" width="42" height="20.5"/>
+                                <rect key="frame" x="279" y="172.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRU-Pa-V7I" customClass="MDRadialProgressView">
-                                <rect key="frame" x="150" y="235" width="300" height="300"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="Ip4-Oh-9r3"/>
-                                    <constraint firstAttribute="width" constant="300" id="nkz-ZU-IIW"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="bRU-Pa-V7I" secondAttribute="centerY" id="JjV-f4-aXP"/>
-                            <constraint firstItem="LYB-c2-3ZW" firstAttribute="top" secondItem="SAN-tz-0fg" secondAttribute="bottom" constant="20" id="OI2-9D-7TA"/>
+                            <constraint firstItem="LYB-c2-3ZW" firstAttribute="top" secondItem="SAN-tz-0fg" secondAttribute="bottom" constant="19.5" id="Qq2-4P-zpc"/>
                             <constraint firstAttribute="centerX" secondItem="bRU-Pa-V7I" secondAttribute="centerX" id="S4n-RL-MSJ"/>
-                            <constraint firstItem="bRU-Pa-V7I" firstAttribute="top" secondItem="LYB-c2-3ZW" secondAttribute="bottom" constant="20" id="cza-oF-QAq"/>
+                            <constraint firstAttribute="centerX" secondItem="eAR-JS-AXs" secondAttribute="centerX" id="asW-lY-pL1"/>
                             <constraint firstAttribute="centerX" secondItem="SAN-tz-0fg" secondAttribute="centerX" id="dhv-0T-Lgr"/>
+                            <constraint firstItem="eAR-JS-AXs" firstAttribute="top" secondItem="LYB-c2-3ZW" secondAttribute="bottom" constant="8" id="epH-qQ-53H"/>
+                            <constraint firstAttribute="centerX" secondItem="tnH-01-eNi" secondAttribute="centerX" id="f3p-x1-0H0"/>
+                            <constraint firstItem="tnH-01-eNi" firstAttribute="top" secondItem="eAR-JS-AXs" secondAttribute="bottom" constant="8" id="m3e-IH-F9J"/>
                             <constraint firstItem="jG1-29-BKV" firstAttribute="top" secondItem="bRU-Pa-V7I" secondAttribute="bottom" constant="16" id="ol7-Fl-TMb"/>
+                            <constraint firstItem="bRU-Pa-V7I" firstAttribute="top" secondItem="tnH-01-eNi" secondAttribute="bottom" constant="45" id="ukk-r3-Wfj"/>
                             <constraint firstAttribute="centerX" secondItem="LYB-c2-3ZW" secondAttribute="centerX" id="wzZ-Nh-xff"/>
                         </constraints>
                         <variation key="default">
@@ -165,8 +181,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Pedometer" id="3uj-PC-BBQ"/>
                     <connections>
+                        <outlet property="distanceLabel" destination="eAR-JS-AXs" id="4Zb-tz-guH"/>
                         <outlet property="goalLabel" destination="LYB-c2-3ZW" id="Mh3-ne-Vpx"/>
                         <outlet property="radialView" destination="bRU-Pa-V7I" id="tkZ-ED-Yc0"/>
+                        <outlet property="rateLabel" destination="tnH-01-eNi" id="ahP-S8-dqY"/>
                         <outlet property="stepsTodayLabel" destination="SAN-tz-0fg" id="lAq-Wd-A4P"/>
                     </connections>
                 </viewController>
