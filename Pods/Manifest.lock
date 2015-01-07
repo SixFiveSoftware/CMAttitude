@@ -1,0 +1,10 @@
+PODS:
+  - MDRadialProgress (1.0.7)
+
+DEPENDENCIES:
+  - MDRadialProgress (~> 1.0.2)
+
+SPEC CHECKSUMS:
+  MDRadialProgress: 83828036d0b670867aff7c6b2417c870b9723871
+
+COCOAPODS: 0.34.4
