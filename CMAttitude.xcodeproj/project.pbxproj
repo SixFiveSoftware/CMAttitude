@@ -13,8 +13,8 @@
 		3B1505DE1A5D56C2006D084C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B1505DD1A5D56C2006D084C /* Images.xcassets */; };
 		3B1505E11A5D56C2006D084C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B1505DF1A5D56C2006D084C /* LaunchScreen.xib */; };
 		3B1505ED1A5D56C2006D084C /* CMAttitudeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1505EC1A5D56C2006D084C /* CMAttitudeTests.swift */; };
-		3B1506331A5DB41A006D084C /* GyroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1506321A5DB41A006D084C /* GyroscopeViewController.swift */; };
 		3B1506351A5DB9B7006D084C /* PedometerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B1506341A5DB9B7006D084C /* PedometerViewController.swift */; };
+		3B24440F1A5F3D9C004A9363 /* GyroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B24440E1A5F3D9C004A9363 /* GyroscopeViewController.swift */; };
 		5D7BDE041FACF3D563DD6321 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB90BA4453AB8950A1958E07 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -39,8 +39,8 @@
 		3B1505E61A5D56C2006D084C /* CMAttitudeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CMAttitudeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B1505EB1A5D56C2006D084C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B1505EC1A5D56C2006D084C /* CMAttitudeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CMAttitudeTests.swift; sourceTree = "<group>"; };
-		3B1506321A5DB41A006D084C /* GyroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GyroscopeViewController.swift; path = ../GyroscopeViewController.swift; sourceTree = "<group>"; };
 		3B1506341A5DB9B7006D084C /* PedometerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PedometerViewController.swift; sourceTree = "<group>"; };
+		3B24440E1A5F3D9C004A9363 /* GyroscopeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GyroscopeViewController.swift; sourceTree = "<group>"; };
 		3B4A1AA1A23CAF6A8395F91C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		3B9EB76C1A5DBF4B00CE5832 /* CMAttitude-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CMAttitude-Bridging-Header.h"; sourceTree = "<group>"; };
 		4CEA4EFC8910343229673438 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,7 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				3B1505D61A5D56C2006D084C /* AppDelegate.swift */,
-				3B1506321A5DB41A006D084C /* GyroscopeViewController.swift */,
+				3B24440E1A5F3D9C004A9363 /* GyroscopeViewController.swift */,
 				3B1506341A5DB9B7006D084C /* PedometerViewController.swift */,
 				3B1505D81A5D56C2006D084C /* AttitudeViewController.swift */,
 				3B1505DA1A5D56C2006D084C /* Main.storyboard */,
@@ -281,8 +281,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3B1506351A5DB9B7006D084C /* PedometerViewController.swift in Sources */,
-				3B1506331A5DB41A006D084C /* GyroscopeViewController.swift in Sources */,
 				3B1505D91A5D56C2006D084C /* AttitudeViewController.swift in Sources */,
+				3B24440F1A5F3D9C004A9363 /* GyroscopeViewController.swift in Sources */,
 				3B1505D71A5D56C2006D084C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

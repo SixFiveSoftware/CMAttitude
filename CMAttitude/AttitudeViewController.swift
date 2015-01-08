@@ -19,11 +19,17 @@ class AttitudeViewController: UIViewController {
     
     let motionManager = CMMotionManager()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-   
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         motionManager.deviceMotionUpdateInterval = 0.01
         handleAttitude()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        motionManager.stopDeviceMotionUpdates()
+    
+        super.viewWillDisappear(animated)
     }
 
     func handleAttitude() {

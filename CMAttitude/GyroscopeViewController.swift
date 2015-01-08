@@ -15,11 +15,17 @@ class GyroscopeViewController: UIViewController {
 
     let motionManager = CMMotionManager()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         motionManager.deviceMotionUpdateInterval = 0.01
         handleImageRotation()
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        motionManager.stopDeviceMotionUpdates()
+        
+        super.viewWillDisappear(animated)
     }
 
     func handleImageRotation() {

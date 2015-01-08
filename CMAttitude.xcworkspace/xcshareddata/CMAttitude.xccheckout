@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>29D36D09-43EB-4473-A5D1-4E9835309DDE</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CMAttitude</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E8A0329DE821DC5A9C37C392A94152DC40EF1545</key>
+		<string>github.com:SixFiveSoftware/CMAttitude.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CMAttitude.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E8A0329DE821DC5A9C37C392A94152DC40EF1545</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:SixFiveSoftware/CMAttitude.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E8A0329DE821DC5A9C37C392A94152DC40EF1545</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E8A0329DE821DC5A9C37C392A94152DC40EF1545</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CMAttitude</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -34,16 +34,12 @@ class PedometerViewController: UIViewController {
         return (stepsToday * 100) / dailyGoal
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         
         goalLabel.text = "Daily goal: \(dailyGoal) steps"
         
         setupRadialProgressView()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
         
         handlePedometer()
     }
@@ -81,13 +77,13 @@ class PedometerViewController: UIViewController {
     
     // Radial progress view
     func setupRadialProgressView() {
-        self.radialView.progressTotal = 100
-        self.radialView.progressCounter = 0
-        self.radialView.theme.completedColor = UIColor.darkGrayColor()
-        self.radialView.theme.incompletedColor = UIColor.clearColor()
-        self.radialView.theme.thickness = 15
-        self.radialView.theme.sliceDividerHidden = true
-        self.radialView.theme.centerColor = self.radialView.theme.incompletedColor
+        radialView.progressTotal = 100
+        radialView.progressCounter = 0
+        radialView.theme.completedColor = UIColor.darkGrayColor()
+        radialView.theme.incompletedColor = UIColor.lightGrayColor()
+        radialView.theme.thickness = 15
+        radialView.theme.sliceDividerHidden = true
+        radialView.theme.centerColor = UIColor.clearColor()
     }
  
     func drawCircle(progress: Int) {
