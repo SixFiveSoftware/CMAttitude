@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CMAttitude
 //
-//  Created by BJ Miller on 1/7/15.
+//  Created by BJ Miller on 1/7/15. For CodeMash 2015 Demo.
 //  Copyright (c) 2015 Six Five Software, LLC. All rights reserved.
 //
 
